@@ -12,6 +12,9 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.defaultault
 
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
+echo 'src-git freifunk https://github.com/freifunk/openwrt-packages.git' >>feeds.conf.default
 
 #sed -i 's@coolsnowwolf/packages@P3TERX/packages@' feeds.conf.default
 
