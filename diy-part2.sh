@@ -31,4 +31,4 @@ sed -i 's/luci-theme-bootstrap/luci-theme-edge/g' feeds/luci/collections/luci/Ma
     sed -i 's@\(CONFIG_KERNEL_BUILD_DOMAIN=\).*@\1$"GitHub Actions"@' .config
 # Change Flash to 64M
 sed -i 's/1fb0000/3fb0000/g' target/linux/ramips/dts/mt7621_d-team_newifi-d2.dts
-sed -i '461c  IMAGE_SIZE := 64896k' -i '466c kmod-usb-ledtrig-usbport -wpad-openssl'  target/linux/ramips/image/mt7621.mk
+sed -i '461c  IMAGE_SIZE := 64896k' -i 's/kmod-usb-ledtrig-usbport luci-app-mtwifi -wpad-openssl/kmod-usb-ledtrig-usbport -wpad-openssl/g'  target/linux/ramips/image/mt7621.mk
